@@ -6,13 +6,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <x-nav-link href="/" class="nav-link active" aria-current="page">
+        <x-nav-link href="/" class={{request()->is('/')}} aria-current="page">
             Home
         </x-nav-link>
-        <x-nav-link href="/about" class="nav-link active" aria-current="page">
+        <x-nav-link href="/about" class="nav-link" aria-current="page">
             About
         </x-nav-link>
-        <x-nav-link href="/contacts" class="nav-link active" aria-current="page">
+        <x-nav-link href="/contacts" class="nav-link" aria-current="page">
             Contacts
         </x-nav-link>
         <li class="nav-item dropdown">
