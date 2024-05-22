@@ -10,6 +10,6 @@ class BusinessService extends Model
     use HasFactory;
     protected $table = 'business_services';
 
-    protected $fillable = ['service_id', 'business_id','description'];
+    protected $fillable = ['service_id','description'];
     public $timestamps = false;
 }

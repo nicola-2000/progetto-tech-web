@@ -11,5 +11,7 @@ class Service extends Model
 
     protected $table = 'services';
 
+    protected $fillable = ['service_id', 'business_id', 'description'];
+
     public $timestamps = false;
 }

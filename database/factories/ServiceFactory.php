@@ -17,7 +17,9 @@ class ServiceFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'id' => $this->faker->numberBetween(1,10000000),
+            'service_name' => $this->faker->name(),
+            'description' => $this->faker->text()
         ];
     }
 }

@@ -18,7 +18,7 @@ class BusinessFactory extends Factory
     public function definition(): array
     {
         return [
-            'business_id' => $this->faker->numberBetween(0, 1000000000),
+            'id' => $this->faker->numberBetween(0, 1000000000),
             'business_name' => $this->faker->lastName(),
             'address' => $this->faker->address(),
             'phone_number' => $this->faker->phoneNumber(),

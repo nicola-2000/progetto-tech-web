@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('businesses', function (Blueprint $table) {
-            $table->id('business_id')->unique();
+            $table->id('id');
             $table->string('business_name');
             $table->string('address');
             $table->string('phone_number');
@@ -22,7 +22,6 @@ return new class extends Migration
             $table->string('weekDayOpen');
             $table->time('opening_time');
             $table->time('closing_time');
-            $table->timestamps();
         });
     }
 

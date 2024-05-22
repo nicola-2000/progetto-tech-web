@@ -18,8 +18,8 @@ class BusinessServiceFactory extends Factory
     {
 
         return [
-            'service_id' => $this->faker->numberBetween(1, 10),
-            'business_id' => Business::inRandomOrder()->id ?? Business::factory('business_id'),
+            'id' => $this->faker->numberBetween(1, 10),
+            'business_id' => Business::factory(),
             'service_name' => $this->faker->userName(),
             'description' => $this->faker->text(200),
             'price' => $this->faker->randomFloat(2, 1.00, 1000.00)

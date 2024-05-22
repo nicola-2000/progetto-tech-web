@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('business_services', function (Blueprint $table) {
-            $table->id('service_id')->unique();
-            $table->foreignId('business_id')->references('business_id')->on('businesses')->onDelete('cascade');
+            $table->id('id');
+            $table->foreignIdFor(App\Models\Business::class)->constrained()->cascadeOnDelete();
             $table->string('service_name');
             $table->text('description');
             $table->float('price');
