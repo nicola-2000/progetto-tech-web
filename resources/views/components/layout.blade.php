@@ -15,7 +15,6 @@
 </head>
 <body class="h-full bg-secondary" style="background-image: var( --bs-gradient)">
     <x-navbar>
-        {{$slot}}
     </x-navbar>
     <main>
         {{$slot}}

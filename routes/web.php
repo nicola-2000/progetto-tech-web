@@ -1,55 +1,22 @@
 <?php
 
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
+use App\Models\Listing;
 //alle view si possono passare anche dati, come array
 Route::get('/', function () {
     return view('home', ['greeting' => 'Yo']);
 });
 
-Route::get('/jobs', function () {
-    return view('jobs', [
-        'jobs' => [
-        [
-            'id' => 1,
-            'title' => 'Direttore',
-            'salary' => '€150k/anno'
-        ],
-        [
-            'id' => 2,
-            'title' => 'Programmatore',
-            'salary' => '€100k/anno'
-        ],
-        [
-            'id' => 3,
-            'title' => 'Professore',
-            'salary' => '€50k/anno'
-        ]
-        ]
+Route::get('listings', function () {
+    return view('listings', [
+        'listings' => Listing::all()
     ]);
 });
 
-Route::get('/jobs/{id}', function ($id) {
-    $jobs = [
-        [
-            'id' => 1,
-            'title' => 'Direttore',
-            'salary' => '€150k/anno'
-        ],
-        [
-            'id' => 2,
-            'title' => 'Programmatore',
-            'salary' => '€100k/anno'
-        ],
-        [
-            'id' => 3,
-            'title' => 'Professore',
-            'salary' => '€50k/anno'
-        ]
-    ];
-    $job = Arr::first($jobs, fn($job) => $job['id'] == $id);
+Route::get('/listings/{id}', function ($id) {
+    $listing = Listing::find($id);
 
-    return view('job', ['job' => $job]);
+    return view('listing', ['listing' => $listing]);
 });
 
 Route::get('/contacts', function () {

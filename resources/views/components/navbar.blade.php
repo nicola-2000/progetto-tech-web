@@ -4,8 +4,8 @@
         <x-nav-link href="/" isActive="{{request()->is('/')}}">
           Home
       </x-nav-link>
-      <x-nav-link href="/jobs"  isActive="{{request()->is('jobs')}}">
-          Jobs
+      <x-nav-link href="/listings"  isActive="{{request()->is('listings')}}">
+          Listings
       </x-nav-link>
       <x-nav-link href="/contacts" isActive="{{request()->is('contacts')}}">
           Contacts
