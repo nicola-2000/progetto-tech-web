@@ -3,3 +3,5 @@
     <a class="{{ $isActive ? 'bg-secondary' : ''}} nav-link link-underline-opacity-0"   
         {{$attributes}}>{{$slot}}
     </a>
+
+
