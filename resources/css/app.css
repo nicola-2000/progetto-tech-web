@@ -1,6 +1,11 @@
-nav.navbar{
-    height:100px;
-}
+.navbar-custom {
+        background-color: #344C64;
+    }
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link {
+        color: #ffffff; /* Colore del testo bianco */
+    }
+
 
 li{
     color: #fff;
