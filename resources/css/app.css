@@ -1,0 +1,126 @@
+/* Assegna i valori alle variabili SCSS */
+:root {
+    --width: 1em;
+    --bg: #201c29;
+    --color: #ab49de;
+}
+
+.navbar {
+    margin: 0;
+    padding: 1em; /* Utilizza il valore diretto al posto della variabile */
+    display: flex;
+    min-width: 380px;
+    height: 60px;
+    justify-content: space-around;
+    align-items: center;
+    position: relative; /* Aggiunge posizione relativa */
+}
+
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #344C64; /* Aggiunge il colore di sfondo */
+    z-index: -1; /* Imposta lo z-index dietro al contenuto della navbar */
+}
+
+.navbar li {
+    position: relative;
+    list-style: none;
+    border-radius: 1em; /* Utilizza il valore diretto al posto della variabile */
+}
+
+.navbar li::before,
+.navbar li::after {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #7f408b; /* Utilizza un colore fisso */
+    transition: all 0.5s cubic-bezier(0.4, -1, 0.2, -1);
+}
+
+.navbar li::before {
+    top: 0;
+    border-top-right-radius: 0.5em; /* Utilizza il valore diretto al posto della variabile */
+    border-top-left-radius: 0.5em; /* Utilizza il valore diretto al posto della variabile */
+}
+.navbar li::after {
+    bottom: 0;
+    border-bottom-right-radius: 0.5em; /* Utilizza il valore diretto al posto della variabile */
+    border-bottom-left-radius: 0.5em; /* Utilizza il valore diretto al posto della variabile */
+}
+
+.navbar li:hover::before,
+.navbar li:hover::after {
+    width: 25%;
+    height: 3px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    display: block;
+    padding: 0.5em 2em; /* Utilizza i valori diretti al posto delle variabili */
+    font-family: "Poppins", sans-serif;
+    font-size: 16px; /* Riduci la dimensione del testo */
+    font-weight: normal; /* Imposta il peso del carattere su normale */
+    color: #240750; /* Utilizza un colore fisso */
+}
+
+.navbar li.active {
+    border-color: #4d1b46; /* Utilizza un colore fisso */
+}
+
+.navbar li.active::before,
+.navbar li.active::after {
+    width: 100%;
+    height: 50%;
+}
+
+
+p {
+    font-family: Arial, sans-serif; /* Cambia il tipo di carattere */
+    font-size: 18px; /* Cambia la dimensione del testo */
+    color: #333; /* Cambia il colore del testo */
+    line-height: 1.5; /* Imposta l'altezza della riga */
+}
+
+.first-sentence {
+    font-size: 32px; /* Dimensione del testo aumentata */
+    font-weight: bold;
+}
+
+button.custom-button {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 8px;
+    font-size: 20px;
+    height: 60px;
+    padding: 0 50px;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(92.88deg, rgb(69, 94, 181) 9.16%, rgb(86, 67, 204) 43.89%, rgb(103, 63, 215) 64.72%);
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto; /* Centra il bottone orizzontalmente */
+}
+
+button.custom-button:hover {
+    box-shadow: 0 1px 40px rgba(80, 63, 205, 0.5);
+}
+
+
+li{
+    color: #fff;
+}
