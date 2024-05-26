@@ -51,7 +51,10 @@
                 <a class="nav-link" href="#">Informazioni utili</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Log-in</a>
+                <a class="nav-link" href="/login-customer">Log-in</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/register-customer">Registrati</a>
             </li>
         </ul>
     </div>
