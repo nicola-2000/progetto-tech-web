@@ -14,4 +14,8 @@ class Service extends Model
     protected $fillable = ['service_id', 'business_id', 'description'];
 
     public $timestamps = false;
+
+    public function business(){
+        return $this->belongsToMany(Business::class);
+    }
 }

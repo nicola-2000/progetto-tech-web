@@ -11,4 +11,8 @@ class Business extends Model
     protected $table = 'businesses';
     protected $fillable = ['business_id'];
     public $timestamps = false;
+
+    public function services(){
+        return $this->hasMany(Service::class);
+    }
 }
