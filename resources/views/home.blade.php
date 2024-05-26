@@ -1,4 +1,9 @@
 <x-layout>
+    <style>div.container {
+        background: #212529;
+        width:100%;
+    }
+    </style>
     <!-- Inserisci il tuo testo qui sopra il carousel -->
     <div class="container text-center">
         <div class="row">
@@ -14,10 +19,10 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="..." alt="Iscriviti">
+      <img class="d-block w-100" src="{{url('/images/logo.png')}}" alt="Iscriviti">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Accedi">
+      <img class="d-block w-100" src="{{url('/images/sus.png')}}" alt="Accedi">
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="..." alt="Prenotati">
