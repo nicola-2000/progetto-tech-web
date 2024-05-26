@@ -12,4 +12,10 @@ class Booking extends Model
     protected $table = 'bookings';
 
     public $timestamps = false;
+
+    /* Questo metodo è un relazione tra il booking (effettuato da) e un customer
+       Uno a uno o uno a molti  */
+    public function customer(){
+        return $this->belongsTo(Customer::class);
+    }
 }
