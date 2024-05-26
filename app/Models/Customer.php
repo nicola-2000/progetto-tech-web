@@ -10,12 +10,32 @@ class Customer extends Model
     use HasFactory;
 
     protected $table = 'customers';
-    protected $fillable = ['customer_id', 'name', 'surname', 'email', 'fiscal_code', 'password', 'role', 'creation_date'];
+    protected $fillable = [
+        'first_name', 
+        'last_name',
+        'email',
+        'fiscal_code',
+        'password'];
+
+        protected $hidden = [
+            'password',
+            'remember_token'
+        ];
+
     public $timestamps = false;
 
     public function bookings() {
         return $this->hasMany(Booking::class);
     }
-
-    
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'password' => 'hashed',
+        ];
+    }
 }

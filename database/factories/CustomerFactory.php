@@ -10,6 +10,8 @@ use Illuminate\Support\Str;
  */
 class CustomerFactory extends Factory
 {
+
+    protected static ?string $password;
     /**
      * Define the model's default state.
      *
@@ -20,7 +22,7 @@ class CustomerFactory extends Factory
         return [
             'id' => $this->faker->numberBetween(0, 1000000000),
             'name' => $this->faker->name(),
-            'surname' => $this->faker->name(),
+            'surname' => $this->faker->lastName(),
             'email' => $this->faker->safeEmail(),
             'fiscal_code' => Str::random(16),
             'password' => $this->faker->password(6, 20),
