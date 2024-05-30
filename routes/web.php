@@ -27,7 +27,7 @@ Route::get('/contacts', function () {
 
 // rotte autenticazione
 Route::get('/register-customer', [RegisteredUserController::class, 'create']);
-Route::post('/register', [RegisteredUserController::class, 'store']);
+Route::patch('/register-customer', [RegisteredUserController::class, 'store']);
 
 Route::get('/login-customer', [SessionController::class, 'create']);
 Route::post('/login', [SessionController::class, 'store']);

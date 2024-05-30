@@ -12,22 +12,24 @@ class RegisteredUserController extends Controller
 {
     public function create()
     {
-        /* return view('auth.register-customer'); */
-        /* per sanity check -> */ dd('register customer');
+        return view('auth.register-customer'); 
+        /* per sanity check -> dd('register customer');*/
     }
 
     public function store()
     {
-        $attributes = request()->validate([
+        $validatedAttributes = request()->validate([
             'first_name'=> ['required'],
             'last_name'=> ['required'],
             'fiscal_code'=> ['required'],
             'email'=> ['required', 'email'],
-            'password'=> ['required', Password::min(8), 'password']
+            'password'=> ['required', Password::min(8), 'confirmed']
         ]);
 
-        $user = User::create($attributes);
-        Auth::login($user);
-        return redirect('/');
+        dd(request()->all($validatedAttributes));
+
+/*         $customer = Customer::create($validatedAttributes);
+        Auth::login($customer);
+        return redirect('/'); */
     }
 }

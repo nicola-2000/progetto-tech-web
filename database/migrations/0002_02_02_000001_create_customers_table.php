@@ -14,13 +14,12 @@ return new class extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->id('id');
+            $table->foreignIdFor(App\Models\User::class)->constrained()->cascadeOnDelete();
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email')->unique();
             $table->string('fiscal_code')->unique();
-            /* $table->timestamp('email_verified_at')->nullable(); */
             $table->string('password');
-            /* $table->boolean('role'); */
             $table->dateTime('creation_date');
         });
 

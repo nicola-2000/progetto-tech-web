@@ -1,7 +1,7 @@
 <x-layout>
     <form method="POST" action="/login-customer">
         @csrf
-
+        @method('PATCH')
         <div class="">
             <div class="">
                 <div class="">
@@ -10,7 +10,7 @@
                         <x-form-label for="email">Email</x-form-label>
 
                         <div class="">
-                            <x-form-input name="email" id="email" type="email" required />
+                            <x-form-input name="email" id="email" type="email" :value="old('email')" required />
 
                             <x-form-error name="email" />
                         </div>

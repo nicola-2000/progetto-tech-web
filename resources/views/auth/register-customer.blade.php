@@ -1,6 +1,7 @@
 <x-layout>
     <form method="POST" action="/register-customer">
         @csrf
+        @method('patch')
         <div class="">
             <div class="">
                 <div class="">
@@ -24,7 +25,7 @@
                     <x-form-field>
                         <x-form-label for="fiscal_code">Fiscal code</x-form-label>
                         <div class="">
-                            <x-form-input name="fiscal_code" id="fiscal_code" type="fiscal_code" />
+                            <x-form-input name="fiscal_code" id="fiscal_code" />
                             <x-form-error name="fiscal_code" />
                         </div>
                     </x-form-field>
@@ -42,6 +43,14 @@
                         <div class="">
                             <x-form-input name="password" id="password" type="password" />
                             <x-form-error name="password" />
+                        </div>
+                    </x-form-field>
+                    {-- form field password conf --}
+                    <x-form-field>
+                        <x-form-label for="password_confirmation">Password</x-form-label>
+                        <div class="">
+                            <x-form-input name="password_confirmation" id="password_confirmation" type="password" />
+                            <x-form-error name="password_confirmation" />
                         </div>
                     </x-form-field>
                 </div>
